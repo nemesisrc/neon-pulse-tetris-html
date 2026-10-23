@@ -1,6 +1,10 @@
+<div align="center">
+
 # 🎮 Neon Pulse Tetris
 
 ### A Modern Neon Arcade Experience Built with HTML, CSS & Vanilla JavaScript
+
+</div>
 
 <p align="center">
   <strong>⚡ Classic Tetris. Cyberpunk Aesthetics. Zero Frameworks.</strong>
