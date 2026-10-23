@@ -1,6 +1,5 @@
-<p align="center>
 # 🎮 Neon Pulse Tetris
-</p>
+
 ### A Modern Neon Arcade Experience Built with HTML, CSS & Vanilla JavaScript
 
 <p align="center">
