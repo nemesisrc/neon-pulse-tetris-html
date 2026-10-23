@@ -1,4 +1,4 @@
-                                                # 🎮 Neon Pulse Tetris
+                                                 🎮 Neon Pulse Tetris
 
 ### A Modern Neon Arcade Experience Built with HTML, CSS & Vanilla JavaScript
 
