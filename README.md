@@ -473,5 +473,5 @@ Replace these placeholders with your actual profile links before publishing.
 </p>
 
 <p align="center">
-  Built with ❤️ using HTML, CSS, and Vanilla JavaScript.
+  Built with ❤️ by nemesis.
 </p>
