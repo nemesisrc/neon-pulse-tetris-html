@@ -1,5 +1,6 @@
+<p align="center>
 # 🎮 Neon Pulse Tetris
-
+</p>
 ### A Modern Neon Arcade Experience Built with HTML, CSS & Vanilla JavaScript
 
 <p align="center">
@@ -460,8 +461,8 @@ If you intend to publish the project publicly, consider adding a `LICENSE` file.
 
 **Your Name**
 
-- GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- Portfolio: [Your Portfolio](https://example.com)
+- GitHub: [Rajdeep Chakraborty](https://github.com/nemesisrc)
+- Portfolio: [Your Portfolio]([https://](https://nemesisrc.github.io/portfolio-2026/rajdeep-chakraborty.html))
 
 Replace these placeholders with your actual profile links before publishing.
 
