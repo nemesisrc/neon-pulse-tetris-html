@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-  <strong>⚡ Classic Tetris. Cyberpunk Aesthetics. Zero Frameworks.</strong>
+  <strong>⚡ Classic Tetris. Cyberpunk Aesthetics. Zero Frameworks ⚡</strong>
 </p>
 
 <p align="center">
