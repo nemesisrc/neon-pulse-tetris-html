@@ -60,15 +60,15 @@ Replace these example paths with your actual screenshot or GIF files.
 
 ## 🛠️ Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| **HTML5** | Game layout, interface components, canvas elements, buttons, and overlays |
-| **CSS3** | Neon styling, gradients, glassmorphism, responsive layout, transitions, and glow effects |
+| Technology                    | Purpose                                                                                   |
+| ----------------------------- | ----------------------------------------------------------------------------------------- |
+| **HTML5**                     | Game layout, interface components, canvas elements, buttons, and overlays                 |
+| **CSS3**                      | Neon styling, gradients, glassmorphism, responsive layout, transitions, and glow effects  |
 | **Vanilla JavaScript (ES6+)** | Game logic, state management, collision detection, scoring, input handling, and animation |
-| **HTML5 Canvas API** | Rendering the game board, tetrominoes, ghost pieces, and visual effects |
-| **Web Audio API** | Real-time synthesized sound effects without external audio files |
-| **Google Fonts** | Orbitron and Outfit typography for the futuristic interface |
-| **Browser Animation APIs** | `requestAnimationFrame()` for the main rendering loop |
+| **HTML5 Canvas API**          | Rendering the game board, tetrominoes, ghost pieces, and visual effects                   |
+| **Web Audio API**             | Real-time synthesized sound effects without external audio files                          |
+| **Google Fonts**              | Orbitron and Outfit typography for the futuristic interface                               |
+| **Browser Animation APIs**    | `requestAnimationFrame()` for the main rendering loop                                     |
 
 ### Dependencies
 
@@ -128,31 +128,31 @@ The game ends when newly spawned pieces can no longer fit on the board.
 
 ### 🕹️ Keyboard Controls
 
-| Key | Action |
-|---|---|
-| `←` Left Arrow | Move the active piece left |
-| `→` Right Arrow | Move the active piece right |
-| `↑` Up Arrow | Rotate the active piece clockwise |
-| `↓` Down Arrow | Soft drop — move the piece down one row |
-| `Space` | Hard drop — instantly place the piece |
-| `C` | Hold or swap the active piece |
-| `Shift` | Hold or swap the active piece |
-| `P` | Pause or resume the game |
-| `Esc` | Pause or resume the game |
+| Key             | Action                                  |
+| --------------- | --------------------------------------- |
+| `←` Left Arrow  | Move the active piece left              |
+| `→` Right Arrow | Move the active piece right             |
+| `↑` Up Arrow    | Rotate the active piece clockwise       |
+| `↓` Down Arrow  | Soft drop — move the piece down one row |
+| `Space`         | Hard drop — instantly place the piece   |
+| `C`             | Hold or swap the active piece           |
+| `Shift`         | Hold or swap the active piece           |
+| `P`             | Pause or resume the game                |
+| `Esc`           | Pause or resume the game                |
 
 ### 📱 Touch Controls
 
 The interface includes dedicated on-screen buttons for mobile and touch-enabled devices.
 
-| Button | Action |
-|---|---|
-| **HOLD** | Store or swap the current tetromino |
-| **↻** | Rotate the piece |
-| **⚡** | Hard drop |
-| **←** | Move left |
-| **↓** | Soft drop |
-| **→** | Move right |
-| **PAUSE / RESUME** | Toggle the paused state |
+| Button             | Action                              |
+| ------------------ | ----------------------------------- |
+| **HOLD**           | Store or swap the current tetromino |
+| **↻**              | Rotate the piece                    |
+| **⚡**             | Hard drop                           |
+| **←**              | Move left                           |
+| **↓**              | Soft drop                           |
+| **→**              | Move right                          |
+| **PAUSE / RESUME** | Toggle the paused state             |
 
 ### 🔊 Audio
 
@@ -212,12 +212,12 @@ The hold operation is limited to once per piece placement, following a familiar 
 
 The game awards points for clearing lines and performing hard drops.
 
-| Lines Cleared | Base Points |
-|---|---:|
-| Single | 100 |
-| Double | 300 |
-| Triple | 500 |
-| Tetris — Four lines | 800 |
+| Lines Cleared       | Base Points |
+| ------------------- | ----------: |
+| Single              |         100 |
+| Double              |         300 |
+| Triple              |         500 |
+| Tetris — Four lines |         800 |
 
 Line-clear points are multiplied by the current level.
 
@@ -261,18 +261,18 @@ Neon Pulse Tetris follows a futuristic arcade design language.
 
 ### Layout Components
 
-| Component | Responsibility |
-|---|---|
-| Header | Game title and audio toggle |
-| Hold panel | Displays the stored tetromino |
-| Score panel | Displays the current score |
-| Level panel | Displays the current difficulty level |
-| Lines panel | Displays total lines cleared |
-| Main board | Renders gameplay and visual effects |
-| Next panel | Previews the upcoming tetromino |
-| Overlay | Displays the start screen, paused state, and game-over screen |
-| Touch controls | Provides buttons for movement and game actions |
-| Keyboard legend | Shows desktop control mappings |
+| Component       | Responsibility                                                |
+| --------------- | ------------------------------------------------------------- |
+| Header          | Game title and audio toggle                                   |
+| Hold panel      | Displays the stored tetromino                                 |
+| Score panel     | Displays the current score                                    |
+| Level panel     | Displays the current difficulty level                         |
+| Lines panel     | Displays total lines cleared                                  |
+| Main board      | Renders gameplay and visual effects                           |
+| Next panel      | Previews the upcoming tetromino                               |
+| Overlay         | Displays the start screen, paused state, and game-over screen |
+| Touch controls  | Provides buttons for movement and game actions                |
+| Keyboard legend | Shows desktop control mappings                                |
 
 ---
 
@@ -297,22 +297,22 @@ The `assets/` directory is optional and is only needed if you add screenshots or
 
 Although the current implementation is contained in one HTML file, its logic is organized into distinct functional sections.
 
-| Module | Key Functions / Components | Responsibility |
-|---|---|---|
-| Audio engine | `SoundEngine` | Synthesizes sound effects |
-| Board initialization | `createGrid()` | Creates the 10 × 20 game grid |
-| Piece generation | `getNextBagPiece()` | Generates shuffled tetrominoes |
-| Collision system | `collide()` | Detects invalid piece positions |
-| Rotation | `rotateMatrix()`, `playerRotate()` | Rotates pieces and attempts wall kicks |
-| Movement | `playerMove()`, `playerDrop()` | Handles horizontal and vertical movement |
-| Hard drop | `playerHardDrop()` | Drops a piece and awards points |
-| Hold system | `playerHold()` | Stores and swaps pieces |
-| Piece placement | `merge()`, `lockPiece()` | Locks pieces into the grid |
-| Line clearing | `clearLines()` | Removes complete rows and updates scoring |
-| Rendering | `drawModernBlock()`, `render()` | Draws blocks, previews, and effects |
-| Game loop | `update()` | Advances automatic piece dropping and rendering |
-| Game lifecycle | `resetGame()`, `gameOver()`, `togglePause()` | Manages game states |
-| Input handling | Keyboard and button event listeners | Processes player input |
+| Module               | Key Functions / Components                   | Responsibility                                  |
+| -------------------- | -------------------------------------------- | ----------------------------------------------- |
+| Audio engine         | `SoundEngine`                                | Synthesizes sound effects                       |
+| Board initialization | `createGrid()`                               | Creates the 10 × 20 game grid                   |
+| Piece generation     | `getNextBagPiece()`                          | Generates shuffled tetrominoes                  |
+| Collision system     | `collide()`                                  | Detects invalid piece positions                 |
+| Rotation             | `rotateMatrix()`, `playerRotate()`           | Rotates pieces and attempts wall kicks          |
+| Movement             | `playerMove()`, `playerDrop()`               | Handles horizontal and vertical movement        |
+| Hard drop            | `playerHardDrop()`                           | Drops a piece and awards points                 |
+| Hold system          | `playerHold()`                               | Stores and swaps pieces                         |
+| Piece placement      | `merge()`, `lockPiece()`                     | Locks pieces into the grid                      |
+| Line clearing        | `clearLines()`                               | Removes complete rows and updates scoring       |
+| Rendering            | `drawModernBlock()`, `render()`              | Draws blocks, previews, and effects             |
+| Game loop            | `update()`                                   | Advances automatic piece dropping and rendering |
+| Game lifecycle       | `resetGame()`, `gameOver()`, `togglePause()` | Manages game states                             |
+| Input handling       | Keyboard and button event listeners          | Processes player input                          |
 
 ---
 
@@ -340,12 +340,12 @@ const SHAPES = {
     [0, 0, 0, 0],
     [1, 1, 1, 1],
     [0, 0, 0, 0],
-    [0, 0, 0, 0]
+    [0, 0, 0, 0],
   ],
   O: [
     [1, 1],
-    [1, 1]
-  ]
+    [1, 1],
+  ],
 };
 ```
 
@@ -384,10 +384,7 @@ level = Math.floor(lines / 10) + 1;
 The automatic drop interval is calculated as:
 
 ```javascript
-dropInterval = Math.max(
-  90,
-  1000 - (level - 1) * 90
-);
+dropInterval = Math.max(90, 1000 - (level - 1) * 90);
 ```
 
 These formulas make the game increasingly challenging as players clear more lines.
@@ -458,10 +455,10 @@ If you intend to publish the project publicly, consider adding a `LICENSE` file.
 
 ## 👨‍💻 Author
 
-**Your Name**
+**RAJDEEP CHAKRABORTY**
 
-- GitHub: [Rajdeep Chakraborty](https://github.com/nemesisrc)
-- Portfolio: [Your Portfolio]([https://](https://nemesisrc.github.io/portfolio-2026/rajdeep-chakraborty.html))
+- GitHub: [https://github.com/nemesisrc]
+- Portfolio: [https://nemesisrc.github.io/portfolio-2026/rajdeep-chakraborty.html]
 
 Replace these placeholders with your actual profile links before publishing.
 
